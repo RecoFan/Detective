@@ -256,17 +256,17 @@ PrefabInstance:
     - target: {fileID: 1042852667165626486, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.99
+      value: -6.28
       objectReference: {fileID: 0}
     - target: {fileID: 1042852667165626486, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11662078
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 1042852667165626486, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.48
+      value: -3.49
       objectReference: {fileID: 0}
     - target: {fileID: 1042852667165626486, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
@@ -291,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 1042852667165626486, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1042852667165626486, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
@@ -326,17 +326,17 @@ PrefabInstance:
     - target: {fileID: 505524657297721169, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 505524657297721169, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 505524657297721169, guid: 002c70f826f285d47a05998f8e7599c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.76
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 002c70f826f285d47a05998f8e7599c9, type: 3}
@@ -603,6 +603,8 @@ GameObject:
   - component: {fileID: 1355660690}
   - component: {fileID: 1355660689}
   - component: {fileID: 1355660688}
+  - component: {fileID: 1355660691}
+  - component: {fileID: 1355660692}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -669,12 +671,86 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355660687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.69, y: -9.3, z: -28}
+  m_LocalPosition: {x: -6.51, y: 2.05, z: -7.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355660691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355660687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8c96e2cdc154e848a3d9fe62464d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraTargets:
+  - TargetTransform: {fileID: 1633500750}
+    TargetInfluenceH: 1
+    TargetInfluenceV: 1
+    TargetOffset: {x: 0, y: 0}
+  CenterTargetOnStart: 0
+  Axis: 0
+  UpdateType: 0
+  FollowHorizontal: 1
+  HorizontalFollowSmoothness: 0.15
+  FollowVertical: 1
+  VerticalFollowSmoothness: 0.15
+  OffsetX: 0
+  OffsetY: 0.37
+  IsRelativeOffset: 1
+  ZoomWithFOV: 0
+  CurrentZoomTriggerID: 0
+  IsCameraPositionLeftBounded: 0
+  IsCameraPositionRightBounded: 0
+  IsCameraPositionTopBounded: 0
+  IsCameraPositionBottomBounded: 0
+  GameCamera: {fileID: 1355660689}
+--- !u!114 &1355660692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355660687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6903f12ac8ae44a41ba2a44700ec60ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pc2D: {fileID: 1355660691}
+  UseNumericBoundaries: 1
+  UseTopBoundary: 0
+  TopBoundary: 10
+  TargetTopBoundary: 0
+  UseBottomBoundary: 1
+  BottomBoundary: -10
+  TargetBottomBoundary: 0
+  UseLeftBoundary: 1
+  LeftBoundary: -10
+  TargetLeftBoundary: 0
+  UseRightBoundary: 0
+  RightBoundary: 10
+  TargetRightBoundary: 0
+  IsCameraPositionHorizontallyBounded: 0
+  IsCameraPositionVerticallyBounded: 0
+  CurrentBoundariesTrigger: {fileID: 0}
+  HasFiredTransitionStarted: 0
+  HasFiredTransitionFinished: 0
+  UseSoftBoundaries: 1
+  Softness: 0.5
+  SoftAreaSize: 0.1
+--- !u!4 &1633500750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1042852667165626486, guid: 002c70f826f285d47a05998f8e7599c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 616477565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1737960970
 PrefabInstance:
   m_ObjectHideFlags: 0

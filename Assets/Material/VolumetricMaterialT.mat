@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: VolumetricMaterialT
+  m_Shader: {fileID: -6465566751694194690, guid: c0bae527318f6804399e8143c88fd17c,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_55EE9920_Texture:
+        m_Texture: {fileID: 2800000, guid: b685e509b6141784c91c4c0c5458a7da, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_66A644D9_Texture:
+        m_Texture: {fileID: 2800000, guid: 5f7bae03f95c343528851fa30ae3a2a2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_A75DF6F_Texture:
+        m_Texture: {fileID: 2800000, guid: 74e8842fa592e44f4a11e261de560e88, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_DB29F771_Texture:
+        m_Texture: {fileID: 2800000, guid: 74e8842fa592e44f4a11e261de560e88, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_52C16ADA: 1
+    - Vector1_C436030E: 1
+    - Vector1_D9BD7578: 0.5
+    m_Colors:
+    - Color_686BCB55: {r: 1, g: 1, b: 1, a: 0}

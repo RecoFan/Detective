@@ -53,6 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DynamicFog\PostProcessingSupport\Demos\DynamicFogOfWarDemo.cs" />
+     <Compile Include="Assets\DynamicFog\PostProcessingSupport\Scripts\DynamicFogPPS.cs" />
      <Compile Include="Assets\MagicaVoxel to Unity\Script\RectPacking\RectPaking.cs" />
      <Compile Include="Assets\MagicaVoxel to Unity\Script\SavingSystem\RuntimeSaving.cs" />
      <Compile Include="Assets\MagicaVoxel to Unity\Script\SavingSystem\Saving.cs" />
@@ -153,16 +155,102 @@
      <Compile Include="Assets\ProCamera2D\Timeline\PC2DAddOrRemoveCameraTarget\PC2DAddOrRemoveCameraTargetMixerBehaviour.cs" />
      <Compile Include="Assets\ProCamera2D\Timeline\PC2DAddOrRemoveCameraTarget\PC2DAddOrRemoveCameraTargetTrack.cs" />
      <Compile Include="Assets\TV_Trigger.cs" />
+     <Compile Include="Assets\VolumetricFog\Extra\DynamicFog\Scripts\DynamicFog.cs" />
+     <Compile Include="Assets\VolumetricFog\Extra\DynamicFog\Scripts\DynamicFogBase.cs" />
+     <Compile Include="Assets\VolumetricFog\Extra\DynamicFog\Scripts\DynamicFogExclusive.cs" />
+     <Compile Include="Assets\VolumetricFog\Extra\DynamicFog\Scripts\DynamicFogManager.cs" />
+     <Compile Include="Assets\VolumetricFog\Extra\DynamicFog\Scripts\DynamicFogOfWar.cs" />
+     <Compile Include="Assets\VolumetricFog\Extra\DynamicFog\Scripts\DynamicFogProfile.cs" />
+     <Compile Include="Assets\VolumetricFog\Extra\DynamicFog\Scripts\FogVolume.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\FogAreaCullingManager.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\FogOfWarHole.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\FogVolume.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\IVolumetricFogRenderComponent.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFog.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogFoW.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogLightParams.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogMaterialIntegration.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogPosT.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogPreT.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogProfile.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogStaticParams.cs" />
+     <Compile Include="Assets\VolumetricFog\Scripts\VolumetricFogWMAPI.cs" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMStandardShaderNormal.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Extra\Glass\GlassCustom.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFODesktopPlusOrthogonal.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFOBasic.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\VolumetricFog.cginc" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFOSimple.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFODesktopPlus.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMUnlit.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_DesktopFogPlusWithSkyHaze.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_MobileFogWithSkyHaze.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMStandardShaderSolid.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_Common.hlsl" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\CopyOpaque.cginc" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\PostProcessingSupport\README FIRST!.txt" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMLambertSolidColor.shader" />
      <None Include="Assets\MagicaVoxel to Unity\Script\Shader\Voxel.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGDesktopPlus.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFOWithSky.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMSurfaceShaderCommon.cginc" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMStandardShader.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGOnlyFog.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Extra\Sprites\Shaders\SpriteFogUnlit.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DynamicFogDither.cginc" />
+     <None Include="Assets\VolumetricFog\Resources\Extra\Sprites\Shaders\SpriteFogCommon.cginc" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_MobileFogOnlyGround.shader" />
+     <None Include="Assets\VolumetricFog\README.txt" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\VolumetricFogOptions.cginc" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Texture.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\ChaosLerp.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMUnlitSolidColor.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFRStandardShader.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\VolumetricFog.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_MobileFogBasic.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Extra\Sprites\Shaders\SpriteFogDiffuseInstancing.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\CopyDepthAndTrans.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGDesktopPlusOrthogonal.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Circle.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\VolumetricFogOverlay.cginc" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\CopySunDepth.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\Letterbox\Resources\Letterbox.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMStandardShaderNormalOcclusion.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\MaskWrite.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFODesktop.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMVertexFragmentShaderCommon.cginc" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFRLambertSolidColor.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMStandardShaderNormalOcclusionIntegrated.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGSimple.shader" />
      <None Include="Assets\ProCamera2D\TransitionFX Textures\README.txt" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGDesktop.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\Blur.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_MobileFogOrthogonal.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\README.txt" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Wipe.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Blinds.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFMLambert.shader" />
      <None Include="Assets\ProCamera2D\README.txt" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFRLambert.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFOOnlyFog.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\CopyOpaque.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGWithSky.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGOrthogonal.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DynamicFogCommon.cginc" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFRStandardShaderSolid.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Shaders\CopyDepth.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFGBasic.shader" />
      <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Shutters.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFOOrthogonal.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Extra\Sprites\Shaders\SpriteFogDiffuse.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\FogOfWar.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFRUnlitSolidColor.shader" />
+     <None Include="Assets\VolumetricFog\Extra\DynamicFog\Resources\Shaders\DFRUnlit.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_DesktopFogWithSkyHaze.shader" />
+     <None Include="Assets\VolumetricFog\Resources\Extra\Sprites\Shaders\SpriteFogUnlitInstancing.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_DesktopFogPlusOrthogonal.shader" />
+     <None Include="Assets\DynamicFog\PostProcessingSupport\Resources\Shaders\DFPPS_MobileFogSimple.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/41899/Detective/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -756,10 +844,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6E0B303A-2726-E8B9-CAB2-F3BD022F0C46}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Lightweight.Runtime.csproj">
       <Project>{662E2D73-552F-EE29-5D1B-5B16D81EC955}</Project>
       <Name>Unity.RenderPipelines.Lightweight.Runtime</Name>

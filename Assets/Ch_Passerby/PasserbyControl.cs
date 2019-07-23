@@ -6,8 +6,8 @@ public class PasserbyControl : MonoBehaviour
 {
     public Animator anim;
     public float MoveSpeed;
-    private int MoveDistance = 3200;
-    private int moving_dis = 0;
+    private float MoveDistance = 3400;
+    private float moving_dis = 0;
     private int rest_time_remain = 0;
     private int isRotating = 0;
     private int rotateAngle = 0;
@@ -37,8 +37,8 @@ public class PasserbyControl : MonoBehaviour
         {
             anim.SetBool("isWalking", true);
             transform.Translate(new Vector3(0, 0, MoveSpeed * Time.deltaTime));
-            moving_dis++;
-            if (moving_dis == (int)MoveDistance/MoveSpeed)
+            moving_dis = moving_dis + MoveSpeed;
+            if (moving_dis > MoveDistance)
             {
                 rest_time_remain = 20;
             }

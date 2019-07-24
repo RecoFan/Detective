@@ -15,13 +15,13 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 1.47
   threshold:
     overrideState: 1
-    value: 0.71
+    value: 0.78
   softKnee:
     overrideState: 0
     value: 0.5
@@ -30,10 +30,10 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 6.33
+    value: 10
   anamorphicRatio:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 1
   color:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -57,12 +57,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: New Post-processing Profile
+  m_Name: Bar_spot_pps
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -3868645830489979932}
   - {fileID: 3471177987123397688}
   - {fileID: 4378030730654971962}
+  - {fileID: 5027413483722823255}
 --- !u!114 &3471177987123397688
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1486,3 +1487,31 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &5027413483722823255
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 1
+    value: 2.69
+  aperture:
+    overrideState: 1
+    value: 14.6
+  focalLength:
+    overrideState: 1
+    value: 119
+  kernelSize:
+    overrideState: 1
+    value: 1

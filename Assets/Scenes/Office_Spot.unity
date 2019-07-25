@@ -1468,6 +1468,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1384151181}
     m_Modifications:
+    - target: {fileID: 3889079830794852540, guid: 6b493f05880ab6d4eb4518d775afdbe4,
+        type: 3}
+      propertyPath: m_Name
+      value: hat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889079830794852540, guid: 6b493f05880ab6d4eb4518d775afdbe4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8033704549832070806, guid: 6b493f05880ab6d4eb4518d775afdbe4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1522,16 +1532,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889079830794852540, guid: 6b493f05880ab6d4eb4518d775afdbe4,
-        type: 3}
-      propertyPath: m_Name
-      value: hat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889079830794852540, guid: 6b493f05880ab6d4eb4518d775afdbe4,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2583010950961011993, guid: 6b493f05880ab6d4eb4518d775afdbe4,
         type: 3}
@@ -2265,6 +2265,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1384151181}
     m_Modifications:
+    - target: {fileID: 5180780557414234174, guid: d4503ec88d7df434eba6ae7099fc9940,
+        type: 3}
+      propertyPath: m_Name
+      value: "\u4E8B\u52A1\u6240m"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180780557414234174, guid: d4503ec88d7df434eba6ae7099fc9940,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4776869846643862316, guid: d4503ec88d7df434eba6ae7099fc9940,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2319,16 +2329,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5180780557414234174, guid: d4503ec88d7df434eba6ae7099fc9940,
-        type: 3}
-      propertyPath: m_Name
-      value: "\u4E8B\u52A1\u6240m"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5180780557414234174, guid: d4503ec88d7df434eba6ae7099fc9940,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7963372728982260602, guid: d4503ec88d7df434eba6ae7099fc9940,
         type: 3}

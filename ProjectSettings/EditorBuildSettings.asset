@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Street.unity
     guid: 188c481657e87ce48a3caecb5485f205
+  - enabled: 1
+    path: Assets/Scenes/FlashBack.unity
+    guid: 0a95b50892b4f654b8bbf42e7c3826eb
+  - enabled: 1
+    path: Assets/Scenes/AfterFlashBack.unity
+    guid: 0c065b55974bd6c428e6ba2c92a64919
+  - enabled: 1
+    path: Assets/Scenes/Office_Spot.unity
+    guid: 07deaf1d40d9fcb4d98a005cf28696e3
   m_configObjects: {}

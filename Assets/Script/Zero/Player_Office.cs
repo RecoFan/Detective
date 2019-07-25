@@ -6,6 +6,7 @@ public class Player_Office : MonoBehaviour
 {
     public float speed;
     Animator ani;
+
     void Start()
     {
         ani = this.GetComponent<Animator>();
@@ -47,7 +48,20 @@ public class Player_Office : MonoBehaviour
         if (other.name == "Trigger_TV")
         {
             if (Input.GetKeyDown(KeyCode.E))
-                Fungus.Flowchart.BroadcastFungusMessage("is_tv_use");
+                Fungus.Flowchart.BroadcastFungusMessage("is_tv_use_2");
+        }
+        if (other.name == "Trigger_Hat")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+                Fungus.Flowchart.BroadcastFungusMessage("is_hat_use");
+        }
+        if(other.name =="Trigger_Door")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Global_Save.Instance.cho = 0;
+                Application.LoadLevel("Street");
+            }
         }
     }
 }

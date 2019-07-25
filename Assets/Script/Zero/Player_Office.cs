@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player_Office : MonoBehaviour
 {
     public float speed;
     Animator ani;
@@ -36,8 +36,18 @@ public class Player : MonoBehaviour
         {
             ani.SetBool("Is_Walking", false);
         }
-        
     }
-
-
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.name == "Trigger_Book")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+                Fungus.Flowchart.BroadcastFungusMessage("is_book_use");
+        }
+        if (other.name == "Trigger_TV")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+                Fungus.Flowchart.BroadcastFungusMessage("is_tv_use");
+        }
+    }
 }

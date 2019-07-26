@@ -7,11 +7,15 @@ public class Player_Office : MonoBehaviour
     public float speed;
     Animator ani;
     bool can_move;
+    GameObject t_TV, t_BOOK, t_HAT;
     void Start()
     {
         ani = this.GetComponent<Animator>();
         speed = 2;
         can_move = false;
+        t_TV = GameObject.Find("UI_tv");
+        t_BOOK = GameObject.Find("UI_book");
+        t_HAT = GameObject.Find("UI_hat");
     }
 
     void Update()
@@ -80,6 +84,37 @@ public class Player_Office : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Trigger_Book")
+        {
+            t_BOOK.GetComponent<MeshRenderer>().enabled = true;
+        }
+        if (other.name == "Trigger_TV")
+        {
+            t_TV.GetComponent<MeshRenderer>().enabled = true;
+        }
+        if (other.name == "Trigger_Hat")
+        {
+            t_HAT.GetComponent<MeshRenderer>().enabled = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == "Trigger_Book")
+        {
+            t_BOOK.GetComponent<MeshRenderer>().enabled = false;
+        }
+        if (other.name == "Trigger_TV")
+        {
+            t_TV.GetComponent<MeshRenderer>().enabled = false;
+        }
+        if (other.name == "Trigger_Hat")
+        {
+            t_HAT.GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
     void Can_Move()
     {
         can_move = true;

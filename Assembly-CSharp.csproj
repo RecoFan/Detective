@@ -719,6 +719,7 @@
     <Compile Include="Assets\Script\Float_air.cs" />
     <Compile Include="Assets\Script\Global\Global_Save.cs" />
     <Compile Include="Assets\Script\Office\Book_Script.cs" />
+    <Compile Include="Assets\Script\Zero\Player_Bar.cs" />
     <Compile Include="Assets\Script\Zero\Player_Office.cs" />
     <Compile Include="Assets\Script\Zero\Player_Street.cs" />
     <Compile Include="Assets\TV_Trigger.cs" />

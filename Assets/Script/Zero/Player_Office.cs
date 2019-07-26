@@ -6,36 +6,39 @@ public class Player_Office : MonoBehaviour
 {
     public float speed;
     Animator ani;
-
+    bool can_move;
     void Start()
     {
         ani = this.GetComponent<Animator>();
         speed = 2;
+        can_move = false;
     }
 
     void Update()
     {
-        
-        if(Input.GetKey(KeyCode.A))
+        if (can_move)
         {
-            this.transform.localEulerAngles= new Vector3(this.transform.rotation.x, -90,  transform.rotation.z);
-            transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
-            ani.SetBool("Is_Walking", true);
-        }
-        else
-        {
-            ani.SetBool("Is_Walking", false);
-        }
-        
-        if(Input.GetKey(KeyCode.D))
-        {
-            this.transform.localEulerAngles = new Vector3(this.transform.rotation.x, 90, transform.rotation.z);
-            transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
-            ani.SetBool("Is_Walking", true);
-        }
-        else if(!Input.GetKey(KeyCode.A))
-        {
-            ani.SetBool("Is_Walking", false);
+            if (Input.GetKey(KeyCode.A))
+            {
+                this.transform.localEulerAngles = new Vector3(this.transform.rotation.x, -90, transform.rotation.z);
+                transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+                ani.SetBool("Is_Walking", true);
+            }
+            else
+            {
+                ani.SetBool("Is_Walking", false);
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                this.transform.localEulerAngles = new Vector3(this.transform.rotation.x, 90, transform.rotation.z);
+                transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+                ani.SetBool("Is_Walking", true);
+            }
+            else if (!Input.GetKey(KeyCode.A))
+            {
+                ani.SetBool("Is_Walking", false);
+            }
         }
     }
     private void OnTriggerStay(Collider other)
@@ -43,17 +46,29 @@ public class Player_Office : MonoBehaviour
         if (other.name == "Trigger_Book")
         {
             if (Input.GetKeyDown(KeyCode.E))
+            {
                 Fungus.Flowchart.BroadcastFungusMessage("is_book_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
+            }
         }
         if (other.name == "Trigger_TV")
         {
             if (Input.GetKeyDown(KeyCode.E))
+            {
                 Fungus.Flowchart.BroadcastFungusMessage("is_tv_use_2");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
+            }
         }
         if (other.name == "Trigger_Hat")
         {
             if (Input.GetKeyDown(KeyCode.E))
+            {
                 Fungus.Flowchart.BroadcastFungusMessage("is_hat_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
+            }
         }
         if(other.name =="Trigger_Door")
         {
@@ -63,5 +78,10 @@ public class Player_Office : MonoBehaviour
                 Application.LoadLevel("Street");
             }
         }
+    }
+
+    void Can_Move()
+    {
+        can_move = true;
     }
 }

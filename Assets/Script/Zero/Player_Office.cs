@@ -78,7 +78,7 @@ public class Player_Office : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Global_Save.Instance.cho = 0;
+                Global_Save.Instance.cho = 1;
                 Application.LoadLevel("Street");
             }
         }

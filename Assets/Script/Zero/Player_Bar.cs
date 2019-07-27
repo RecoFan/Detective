@@ -77,6 +77,15 @@ public class Player_Bar : MonoBehaviour
                 ani.SetBool("Is_Walking", false);
             }
         }
+        if (other.name == "Trigger_Door")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Global_Save.Instance.cho = 1;
+                Application.LoadLevel("Street");
+            }
+        }
+
     }
     void Can_Move()
     {

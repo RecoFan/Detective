@@ -6,18 +6,14 @@ public class Global_Save : MonoBehaviour
 {
     public static Global_Save Instance;
     public float Street_Office_x;
-    public float Street_Office_y;
-    public float Street_Office_z;
     public float Street_Bar_x;
-    public float Street_Bar_y;
-    public float Street_Bar_z;
     public float Street_Ramen_x;
-    public float Street_Ramen_y;
-    public float Street_Ramen_z;
     public float Street_Bank_x;
-    public float Street_Bank_y;
-    public float Street_Bank_z;
+    public bool office_move_state;
     public int cho;
+    public int bar_cho;
+    public float Bar_door_x;
+    public float Bar_keeper_x;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,17 +31,13 @@ public class Global_Save : MonoBehaviour
             Destroy(gameObject);
         }
         Street_Office_x = 2.676593f;
-        Street_Office_y = 0.03016758f;
-        Street_Office_z = -1.496f;
         Street_Bar_x = 20.46f;
-        Street_Bar_y = 0.03016758f;
-        Street_Bar_z = -1.5f;
         Street_Ramen_x = -6.97f;
-        Street_Ramen_y = 0.03016758f;
-        Street_Ramen_z = -1.5f;
         Street_Bank_x = 44.56f;
-        Street_Bank_y = 0.03016758f;
-        Street_Bank_z = -1.5f;
+        Bar_door_x = 3.48f;
+        Bar_keeper_x = -0.38f;
+        office_move_state = false;
+
     }
     // Update is called once per frame
     void Update()

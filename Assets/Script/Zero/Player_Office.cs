@@ -12,7 +12,7 @@ public class Player_Office : MonoBehaviour
     {
         ani = this.GetComponent<Animator>();
         speed = 2;
-        can_move = false;
+        can_move = Global_Save.Instance.office_move_state;
         t_TV = GameObject.Find("UI_tv");
         t_BOOK = GameObject.Find("UI_book");
         t_HAT = GameObject.Find("UI_hat");
@@ -78,8 +78,9 @@ public class Player_Office : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Global_Save.Instance.cho = 1;
+                Global_Save.Instance.cho = 0;
                 Application.LoadLevel("Street");
+                Global_Save.Instance.office_move_state = true;
             }
         }
     }

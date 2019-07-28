@@ -11,6 +11,11 @@ public class Player_Bar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Global_Save.Instance.bar_cho == 0)
+            transform.position = new Vector3(Global_Save.Instance.Bar_door_x, 0.25f, -0.36f);
+        if (Global_Save.Instance.bar_cho == 1)
+            transform.position = new Vector3(Global_Save.Instance.Bar_keeper_x, 0.25f, -0.36f);
+
         ani = this.GetComponent<Animator>();
         speed = 2;
         t_piano = GameObject.Find("UI_piano");
@@ -82,7 +87,16 @@ public class Player_Bar : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Global_Save.Instance.cho = 1;
+                Global_Save.Instance.bar_cho = 0;
                 Application.LoadLevel("Street");
+            }
+        }
+        if (other.name == "Trigger_Barkeeper")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Global_Save.Instance.bar_cho = 1;
+                Application.LoadLevel("Bar_Spot");
             }
         }
 

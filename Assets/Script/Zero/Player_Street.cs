@@ -7,7 +7,7 @@ public class Player_Street : MonoBehaviour
     public float speed;
     Animator ani;
     bool can_move;
-    GameObject t_black, t_back, t_bank, t_bank2, t_npc1, t_npc2, t_ramen, t_board, t_bar;
+    GameObject t_black, t_back, t_bank, t_bank2, t_npc1, t_npc2, t_ramen, t_board, t_bar,t_office;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +23,15 @@ public class Player_Street : MonoBehaviour
         t_ramen = GameObject.Find("UI_ramen");
         t_board = GameObject.Find("UI_board");
         t_bar = GameObject.Find("UI_bar");
-
+        t_office = GameObject.Find("UI_office");
         if (Global_Save.Instance.cho==0)
-            transform.position = new Vector3(Global_Save.Instance.Street_Office_x, Global_Save.Instance.Street_Office_y, Global_Save.Instance.Street_Office_z);
+            transform.position = new Vector3(Global_Save.Instance.Street_Office_x, 0.03016758f, -1.5f);
         if (Global_Save.Instance.cho == 1)
-            transform.position = new Vector3(Global_Save.Instance.Street_Bar_x, Global_Save.Instance.Street_Bar_y, Global_Save.Instance.Street_Bar_z);
+            transform.position = new Vector3(Global_Save.Instance.Street_Bar_x, 0.03016758f, -1.5f);
         if (Global_Save.Instance.cho == 2)
-            transform.position = new Vector3(Global_Save.Instance.Street_Bank_x, Global_Save.Instance.Street_Bank_y, Global_Save.Instance.Street_Bank_z);
+            transform.position = new Vector3(Global_Save.Instance.Street_Bank_x, 0.03016758f, -1.5f);
         if (Global_Save.Instance.cho == 3)
-            transform.position = new Vector3(Global_Save.Instance.Street_Ramen_x, Global_Save.Instance.Street_Ramen_y, Global_Save.Instance.Street_Ramen_z);
+            transform.position = new Vector3(Global_Save.Instance.Street_Ramen_x, 0.03016758f, -1.5f);
     }
 
     // Update is called once per frame
@@ -100,6 +100,10 @@ public class Player_Street : MonoBehaviour
         {
             t_bank2.GetComponent<MeshRenderer>().enabled = true;
         }
+        if (other.name == "trigger_office")
+        {
+            t_office.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -139,6 +143,10 @@ public class Player_Street : MonoBehaviour
         {
             t_bank2.GetComponent<MeshRenderer>().enabled = false;
         }
+        if (other.name == "trigger_office")
+        {
+            t_office.GetComponent<MeshRenderer>().enabled = false;
+        }
     }
     private void OnTriggerStay(Collider other)
     {
@@ -164,6 +172,59 @@ public class Player_Street : MonoBehaviour
             {
                 Global_Save.Instance.cho = 3;
                 Application.LoadLevel("Ramen");
+            }
+        }
+        if (other.name == "trigger_bank2")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("is_bank2_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
+            }
+        }
+        if (other.name == "trigger_board")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("is_board_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
+            }
+        }
+        if (other.name == "trigger_npc1")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("is_npc1_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
+            }
+        }
+        if (other.name == "trigger_npc2")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("is_npc2_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
+            }
+        }
+        if (other.name == "trigger_office")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Global_Save.Instance.cho = 0;
+                Application.LoadLevel("Office");
+            }
+        }
+        if (other.name == "trigger_black")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("is_black_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
             }
         }
     }

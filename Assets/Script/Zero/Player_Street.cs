@@ -7,7 +7,7 @@ public class Player_Street : MonoBehaviour
     public float speed;
     Animator ani;
     bool can_move;
-    GameObject t_black, t_back, t_bank, t_bank2, t_npc1, t_npc2, t_ramen, t_board, t_bar,t_office;
+    GameObject t_black, t_back, t_bank, t_bank2, t_npc1, t_npc2, t_ramen, t_board, t_bar,t_office,t_ramenboard;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +24,7 @@ public class Player_Street : MonoBehaviour
         t_board = GameObject.Find("UI_board");
         t_bar = GameObject.Find("UI_bar");
         t_office = GameObject.Find("UI_office");
+        t_ramenboard = GameObject.Find("UI_ramenboard");
         if (Global_Save.Instance.cho==0)
             transform.position = new Vector3(Global_Save.Instance.Street_Office_x, 0.03016758f, -1.5f);
         if (Global_Save.Instance.cho == 1)
@@ -106,6 +107,10 @@ public class Player_Street : MonoBehaviour
         {
             t_office.GetComponent<MeshRenderer>().enabled = true;
         }
+        if (other.name == "trigger_ramenboard")
+        {
+            t_ramenboard.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -148,6 +153,10 @@ public class Player_Street : MonoBehaviour
         if (other.name == "trigger_office")
         {
             t_office.GetComponent<MeshRenderer>().enabled = false;
+        }
+        if (other.name == "trigger_ramenboard")
+        {
+            t_ramenboard.GetComponent<MeshRenderer>().enabled = false;
         }
     }
     private void OnTriggerStay(Collider other)
@@ -235,6 +244,15 @@ public class Player_Street : MonoBehaviour
             {
                 Global_Save.Instance.cho = 4;
                 Application.LoadLevel("Back");
+            }
+        }
+        if (other.name == "trigger_ramenboard")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("is_ramenboard_use");
+                can_move = false;
+                ani.SetBool("Is_Walking", false);
             }
         }
     }

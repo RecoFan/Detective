@@ -26,26 +26,29 @@ public class Player_Bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (can_move)
         {
-            this.transform.localEulerAngles = new Vector3(this.transform.rotation.x, -90, transform.rotation.z);
-            transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
-            ani.SetBool("Is_Walking", true);
-        }
-        else
-        {
-            ani.SetBool("Is_Walking", false);
-        }
+            if (Input.GetKey(KeyCode.A))
+            {
+                this.transform.localEulerAngles = new Vector3(this.transform.rotation.x, -90, transform.rotation.z);
+                transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+                ani.SetBool("Is_Walking", true);
+            }
+            else
+            {
+                ani.SetBool("Is_Walking", false);
+            }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            this.transform.localEulerAngles = new Vector3(this.transform.rotation.x, 90, transform.rotation.z);
-            transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
-            ani.SetBool("Is_Walking", true);
-        }
-        else if (!Input.GetKey(KeyCode.A))
-        {
-            ani.SetBool("Is_Walking", false);
+            if (Input.GetKey(KeyCode.D))
+            {
+                this.transform.localEulerAngles = new Vector3(this.transform.rotation.x, 90, transform.rotation.z);
+                transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+                ani.SetBool("Is_Walking", true);
+            }
+            else if (!Input.GetKey(KeyCode.A))
+            {
+                ani.SetBool("Is_Walking", false);
+            }
         }
     }
 

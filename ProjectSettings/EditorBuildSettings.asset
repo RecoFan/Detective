@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bar_Spot.unity
     guid: 926125a3ba62c2c4c8ffe0f31f098d14
+  - enabled: 1
+    path: Assets/Scenes/Back.unity
+    guid: 12785b40df520ff47ab7418d8791ce80
   m_configObjects: {}

@@ -9,6 +9,7 @@ public class Global_Save : MonoBehaviour
     public float Street_Bar_x;
     public float Street_Ramen_x;
     public float Street_Bank_x;
+    public float Street_Back_x;
     public bool office_move_state;
     public int cho;
     public int bar_cho;
@@ -34,6 +35,7 @@ public class Global_Save : MonoBehaviour
         Street_Bar_x = 20.46f;
         Street_Ramen_x = -6.97f;
         Street_Bank_x = 44.56f;
+        Street_Back_x = 42.26f;
         Bar_door_x = 3.48f;
         Bar_keeper_x = -0.38f;
         office_move_state = false;

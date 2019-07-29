@@ -32,6 +32,8 @@ public class Player_Street : MonoBehaviour
             transform.position = new Vector3(Global_Save.Instance.Street_Bank_x, 0.03016758f, -1.5f);
         if (Global_Save.Instance.cho == 3)
             transform.position = new Vector3(Global_Save.Instance.Street_Ramen_x, 0.03016758f, -1.5f);
+        if(Global_Save.Instance.cho==4)
+            transform.position = new Vector3(Global_Save.Instance.Street_Back_x, 0.03016758f, -1.5f);
     }
 
     // Update is called once per frame
@@ -225,6 +227,14 @@ public class Player_Street : MonoBehaviour
                 Fungus.Flowchart.BroadcastFungusMessage("is_black_use");
                 can_move = false;
                 ani.SetBool("Is_Walking", false);
+            }
+        }
+        if (other.name == "trigger_back")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Global_Save.Instance.cho = 4;
+                Application.LoadLevel("Back");
             }
         }
     }

@@ -154,6 +154,7 @@ MonoBehaviour:
   Street_Bar_x: 0
   Street_Ramen_x: 0
   Street_Bank_x: 0
+  Street_Back_x: 0
   office_move_state: 0
   cho: 0
   bar_cho: 0
@@ -418,11 +419,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e88a86885cbeb5d4e970ec892922bfc5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1231,7 +1232,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 323
     y: 221
-    width: 122.1311
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

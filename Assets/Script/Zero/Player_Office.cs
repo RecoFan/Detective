@@ -79,6 +79,7 @@ public class Player_Office : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Fungus.Flowchart.BroadcastFungusMessage("is_togo");
                 Global_Save.Instance.cho = 0;
                 Global_Save.Instance.office_move_state = true;
                 Global_Save.Instance.loadName = "Street";

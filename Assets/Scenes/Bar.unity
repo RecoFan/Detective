@@ -160,6 +160,7 @@ MonoBehaviour:
   bar_cho: 0
   Bar_door_x: 0
   Bar_keeper_x: 0
+  loadName: 
 --- !u!4 &17560020
 Transform:
   m_ObjectHideFlags: 0
@@ -1168,6 +1169,9 @@ GameObject:
   - component: {fileID: 646985680}
   - component: {fileID: 646985686}
   - component: {fileID: 646985685}
+  - component: {fileID: 646985689}
+  - component: {fileID: 646985688}
+  - component: {fileID: 646985687}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1232,7 +1236,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 323
     y: 221
-    width: 120
+    width: 128.68848
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1269,8 +1273,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 646985682}
-  selectedCommands: []
+  - {fileID: 646985689}
+  selectedCommands:
+  - {fileID: 646985687}
   variables: []
   description: 
   stepPause: 0
@@ -1340,6 +1345,63 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &646985687
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646985679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: f92ffe1d37e9efa49adf3d22dd987f4d, type: 3}
+  volume: 0.5
+  waitUntilFinished: 0
+--- !u!114 &646985688
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646985679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 646985689}
+  message: is_to_out
+--- !u!114 &646985689
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646985679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 863.87787
+    y: 365.4472
+    width: 124.316895
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 4
+  blockName: Sound Block
+  description: 
+  eventHandler: {fileID: 646985688}
+  commandList:
+  - {fileID: 646985687}
 --- !u!1 &744140653
 GameObject:
   m_ObjectHideFlags: 0

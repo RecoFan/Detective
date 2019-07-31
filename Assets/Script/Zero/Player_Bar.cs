@@ -89,6 +89,7 @@ public class Player_Bar : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Fungus.Flowchart.BroadcastFungusMessage("is_to_out");
                 Global_Save.Instance.cho = 1;
                 Global_Save.Instance.bar_cho = 0;
                 Global_Save.Instance.loadName = "Street";

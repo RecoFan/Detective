@@ -165,6 +165,7 @@ public class Player_Street : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Fungus.Flowchart.BroadcastFungusMessage("is_to_bar");
                 Global_Save.Instance.cho = 1;
                 Global_Save.Instance.loadName = "Bar";
                 Application.LoadLevel("LoadingScene");
@@ -227,6 +228,7 @@ public class Player_Street : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                 Fungus.Flowchart.BroadcastFungusMessage("is_to_office");
                 Global_Save.Instance.cho = 0;
                 Global_Save.Instance.loadName = "Office";
                 Application.LoadLevel("LoadingScene");

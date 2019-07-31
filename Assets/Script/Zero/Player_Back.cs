@@ -96,7 +96,9 @@ public class Player_Back : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Global_Save.Instance.cho = 4;
-                Application.LoadLevel("Street");
+                Global_Save.Instance.loadName = "Street";
+                Application.LoadLevel("LoadingScene");
+                //Application.LoadLevel("Street");
             }
         }
 

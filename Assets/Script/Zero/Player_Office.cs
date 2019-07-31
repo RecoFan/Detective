@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Player_Office : MonoBehaviour
@@ -79,8 +80,11 @@ public class Player_Office : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Global_Save.Instance.cho = 0;
-                Application.LoadLevel("Street");
                 Global_Save.Instance.office_move_state = true;
+                Global_Save.Instance.loadName = "Street";
+                Application.LoadLevel("LoadingScene");
+                //Thread.Sleep(2000);
+                //Application.LoadLevel("Street");
             }
         }
     }

@@ -166,7 +166,9 @@ public class Player_Street : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Global_Save.Instance.cho = 1;
-                Application.LoadLevel("Bar");
+                Global_Save.Instance.loadName = "Bar";
+                Application.LoadLevel("LoadingScene");
+                //Application.LoadLevel("Bar");
             }
         }
         if (other.name == "trigger_bank1")
@@ -226,7 +228,9 @@ public class Player_Street : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Global_Save.Instance.cho = 0;
-                Application.LoadLevel("Office");
+                Global_Save.Instance.loadName = "Office";
+                Application.LoadLevel("LoadingScene");
+                //Application.LoadLevel("Office");
             }
         }
         if (other.name == "trigger_black")
@@ -243,7 +247,9 @@ public class Player_Street : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Global_Save.Instance.cho = 4;
-                Application.LoadLevel("Back");
+                Global_Save.Instance.loadName = "Back";
+                Application.LoadLevel("LoadingScene");
+                //Application.LoadLevel("Back");
             }
         }
         if (other.name == "trigger_ramenboard")

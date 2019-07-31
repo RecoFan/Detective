@@ -91,7 +91,9 @@ public class Player_Bar : MonoBehaviour
             {
                 Global_Save.Instance.cho = 1;
                 Global_Save.Instance.bar_cho = 0;
-                Application.LoadLevel("Street");
+                Global_Save.Instance.loadName = "Street";
+                Application.LoadLevel("LoadingScene");
+                //Application.LoadLevel("Street");
             }
         }
         if (other.name == "Trigger_Barkeeper")

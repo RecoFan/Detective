@@ -15,6 +15,7 @@ public class Global_Save : MonoBehaviour
     public int bar_cho;
     public float Bar_door_x;
     public float Bar_keeper_x;
+    public string loadName;
     // Start is called before the first frame update
     void Start()
     {

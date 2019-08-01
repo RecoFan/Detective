@@ -79,11 +79,12 @@ public class Player_Office : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Fungus.Flowchart.BroadcastFungusMessage("is_togo");
-                Global_Save.Instance.cho = 0;
-                Global_Save.Instance.office_move_state = true;
-                Global_Save.Instance.loadName = "Street";
-                Application.LoadLevel("LoadingScene");
+                StartCoroutine(WWAIT3());
+                // Fungus.Flowchart.BroadcastFungusMessage("is_togo");
+                // Global_Save.Instance.cho = 0;
+                // Global_Save.Instance.office_move_state = true;
+                // Global_Save.Instance.loadName = "Street";
+                // Application.LoadLevel("LoadingScene");
                 //Thread.Sleep(2000);
                 //Application.LoadLevel("Street");
             }
@@ -124,5 +125,14 @@ public class Player_Office : MonoBehaviour
     void Can_Move()
     {
         can_move = true;
+    }
+    IEnumerator WWAIT3()
+    {
+        Fungus.Flowchart.BroadcastFungusMessage("is_togo");
+        yield return new WaitForSeconds(0.5f);
+        Global_Save.Instance.cho = 0;
+        Global_Save.Instance.office_move_state = true;
+        Global_Save.Instance.loadName = "Street";
+        Application.LoadLevel("LoadingScene");
     }
 }

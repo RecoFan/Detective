@@ -165,10 +165,9 @@ public class Player_Street : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Fungus.Flowchart.BroadcastFungusMessage("is_to_bar");
-                Global_Save.Instance.cho = 1;
-                Global_Save.Instance.loadName = "Bar";
-                Application.LoadLevel("LoadingScene");
+                
+               StartCoroutine(WWAIT1());
+              
                 //Application.LoadLevel("Bar");
             }
         }
@@ -228,10 +227,11 @@ public class Player_Street : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                 Fungus.Flowchart.BroadcastFungusMessage("is_to_office");
-                Global_Save.Instance.cho = 0;
-                Global_Save.Instance.loadName = "Office";
-                Application.LoadLevel("LoadingScene");
+               // Fungus.Flowchart.BroadcastFungusMessage("is_to_office");
+                 StartCoroutine(WWAIT2());
+               // Global_Save.Instance.cho = 0;
+               // Global_Save.Instance.loadName = "Office";
+                //Application.LoadLevel("LoadingScene");
                 //Application.LoadLevel("Office");
             }
         }
@@ -269,4 +269,21 @@ public class Player_Street : MonoBehaviour
         can_move = true;
     }
 
+     IEnumerator WWAIT1()
+    {
+        Fungus.Flowchart.BroadcastFungusMessage("is_to_bar");
+        yield return new WaitForSeconds(0.5f);
+        Global_Save.Instance.cho = 1;
+        Global_Save.Instance.loadName = "Bar";
+        Application.LoadLevel("LoadingScene");
+    }
+
+    IEnumerator WWAIT2()
+    {
+        Fungus.Flowchart.BroadcastFungusMessage("is_to_office");
+        yield return new WaitForSeconds(0.5f);
+        Global_Save.Instance.cho = 0;
+        Global_Save.Instance.loadName = "Office";
+        Application.LoadLevel("LoadingScene");
+    }
 }

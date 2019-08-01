@@ -721,11 +721,10 @@ GameObject:
   - component: {fileID: 69771598}
   - component: {fileID: 69771618}
   - component: {fileID: 69771617}
-  - component: {fileID: 69771616}
   - component: {fileID: 69771621}
   - component: {fileID: 69771620}
   - component: {fileID: 69771619}
-  - component: {fileID: 69771622}
+  - component: {fileID: 69771616}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1361,7 +1360,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 69771618}
+  - {fileID: 69771621}
   selectedCommands:
   - {fileID: 69771616}
   variables:
@@ -3348,7 +3347,7 @@ MonoBehaviour:
   - {fileID: 69771611}
 --- !u!114 &69771616
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3358,10 +3357,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 84
+  itemId: 91
   indentLevel: 0
-  soundClip: {fileID: 8300000, guid: 3dda94792d302ac4fb711b91a2ee66b0, type: 3}
-  volume: 1
+  soundClip: {fileID: 8300000, guid: f92ffe1d37e9efa49adf3d22dd987f4d, type: 3}
+  volume: 0.25
   waitUntilFinished: 0
 --- !u!114 &69771617
 MonoBehaviour:
@@ -3402,10 +3401,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 69771617}
   commandList:
-  - {fileID: 69771616}
+  - {fileID: 69771619}
 --- !u!114 &69771619
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3415,9 +3414,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 86
+  itemId: 90
   indentLevel: 0
-  soundClip: {fileID: 8300000, guid: f92ffe1d37e9efa49adf3d22dd987f4d, type: 3}
+  soundClip: {fileID: 8300000, guid: 3dda94792d302ac4fb711b91a2ee66b0, type: 3}
   volume: 0.25
   waitUntilFinished: 0
 --- !u!114 &69771620
@@ -3448,7 +3447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 117.37512
+    x: 116.1093
     y: 1133.2429
     width: 136.07596
     height: 40
@@ -3459,26 +3458,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 69771620}
   commandList:
-  - {fileID: 69771619}
-  - {fileID: 69771622}
---- !u!114 &69771622
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69771520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 87
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 1
-  durationOLD: 0
+  - {fileID: 69771616}
 --- !u!1 &106026626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: aa307bf3961dfe0429f4ca50ddaa0144,

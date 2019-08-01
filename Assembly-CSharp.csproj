@@ -710,6 +710,7 @@
      <Compile Include="Assets\ProCamera2D\Timeline\PC2DAddOrRemoveCameraTarget\PC2DAddOrRemoveCameraTargetMixerBehaviour.cs" />
      <Compile Include="Assets\ProCamera2D\Timeline\PC2DAddOrRemoveCameraTarget\PC2DAddOrRemoveCameraTargetTrack.cs" />
      <Compile Include="Assets\Script\Float_air.cs" />
+     <Compile Include="Assets\Script\GameBegin.cs" />
      <Compile Include="Assets\Script\Global\Global_Save.cs" />
      <Compile Include="Assets\Script\Global\Loading.cs" />
      <Compile Include="Assets\Script\Office\Book_Script.cs" />

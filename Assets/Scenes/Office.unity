@@ -3864,7 +3864,7 @@ MonoBehaviour:
   scrollPos: {x: 814.1176, y: 197.58725}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 209
+  blockViewHeight: 213
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -4976,7 +4976,7 @@ MonoBehaviour:
   indentLevel: 0
   soundClip: {fileID: 8300000, guid: 3dda94792d302ac4fb711b91a2ee66b0, type: 3}
   volume: 1
-  waitUntilFinished: 0
+  waitUntilFinished: 1
 --- !u!114 &1917741713
 MonoBehaviour:
   m_ObjectHideFlags: 2

@@ -436,6 +436,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1920579932}
     m_Modifications:
+    - target: {fileID: 7144833562116160580, guid: b66ad5c118e643646bc54c694faccafb,
+        type: 3}
+      propertyPath: m_Name
+      value: light (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 7515914058474519968, guid: 098ae0f9ccc38d249ae2c9b08aed6c27,
         type: 3}
       propertyPath: m_IsActive
@@ -445,11 +450,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144833562116160580, guid: b66ad5c118e643646bc54c694faccafb,
-        type: 3}
-      propertyPath: m_Name
-      value: light (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3765831569122774537, guid: b66ad5c118e643646bc54c694faccafb,
         type: 3}
@@ -2004,7 +2004,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 726338996}
   selectedCommands:
-  - {fileID: 726338999}
+  - {fileID: 726338998}
   variables:
   - {fileID: 726338926}
   - {fileID: 726338925}
@@ -4733,7 +4733,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &726338994
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4750,7 +4750,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 691713486}
   startVolume: 1
-  endVolume: 0.25
+  endVolume: 0.1
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -4816,7 +4816,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 154877899}
   startVolume: 1
-  endVolume: 0.25
+  endVolume: 0.05
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -4839,7 +4839,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1374415781}
   startVolume: 1
-  endVolume: 0.25
+  endVolume: 0.05
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -4862,7 +4862,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1944445377}
   startVolume: 1
-  endVolume: 1
+  endVolume: 0.1
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -4873,11 +4873,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1271474412}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 7e1e0689307c98e47a6c6920f759c82f,
-        type: 3}
-      propertyPath: m_Name
-      value: Zero@Idle
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7e1e0689307c98e47a6c6920f759c82f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4947,6 +4942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 7e1e0689307c98e47a6c6920f759c82f,
+        type: 3}
+      propertyPath: m_Name
+      value: Zero@Idle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e1e0689307c98e47a6c6920f759c82f, type: 3}
@@ -5253,6 +5253,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 500282200}
     m_Modifications:
+    - target: {fileID: 1768926645313067866, guid: 02256c8e6ce1c5e4f8896c991d7da446,
+        type: 3}
+      propertyPath: m_Name
+      value: closure
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768926645313067866, guid: 02256c8e6ce1c5e4f8896c991d7da446,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8081251137587220839, guid: 02256c8e6ce1c5e4f8896c991d7da446,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5307,16 +5317,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768926645313067866, guid: 02256c8e6ce1c5e4f8896c991d7da446,
-        type: 3}
-      propertyPath: m_Name
-      value: closure
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768926645313067866, guid: 02256c8e6ce1c5e4f8896c991d7da446,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1385158786434199287, guid: 02256c8e6ce1c5e4f8896c991d7da446,
         type: 3}
@@ -5750,6 +5750,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1753375855}
     m_Modifications:
+    - target: {fileID: 6831128251677119472, guid: 1a056bfc6f1c7754fa19b0b470bb021a,
+        type: 3}
+      propertyPath: m_Name
+      value: bin (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 517502384369348011, guid: 1a056bfc6f1c7754fa19b0b470bb021a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5804,11 +5809,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6831128251677119472, guid: 1a056bfc6f1c7754fa19b0b470bb021a,
-        type: 3}
-      propertyPath: m_Name
-      value: bin (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7420302052286112897, guid: 1a056bfc6f1c7754fa19b0b470bb021a,
         type: 3}
